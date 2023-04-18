@@ -26,7 +26,8 @@ Blauw
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img width="1033" alt="Eerste schets:process" src="https://user-images.githubusercontent.com/122603817/232707800-c4ad4a6e-2bbb-45e3-9cef-5cd0a47edd4d.png">
+
 
 
   ### Je ambitie: 
