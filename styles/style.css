@@ -37,9 +37,67 @@ button:not([disabled]) {
 
 h1 {
   color:var(--color-headings);
+  text-align: center;
 }
 
+.parent {
+  display: grid;
+  grid-gap: .6em;
+  grid-template-columns: 9em 9em 9em;
+  grid-template-rows: 9em 9em 9em;
 
+  position: absolute;
+}
+
+.parent > .knoppen {
+  padding: 1em;
+  background-color:yellow;
+  border-radius: 1em;
+
+  display: grid;
+  place-items: center;
+}
+
+.parent > .scherm {
+  background-color: darkslategray;
+  text-transform: uppercase;
+  color: aliceblue;
+
+  display: grid;
+  place-items: center;
+}
+
+.parent .comms {
+  background-color: red;
+  color: aliceblue;
+
+  display: grid;
+  place-items: center;
+}
+
+.parent .attack {
+  background-color: gray;
+  color: aliceblue;
+
+  display: grid;
+  place-items: center;
+}
+
+.parent .navigatie {
+  background-color: dodgerblue;
+  color: aliceblue;
+
+  display: grid;
+  place-items: center;
+}
+
+.parent .kaart {
+  background-color: darkgray;
+  color: aliceblue;
+
+  display: grid;
+  place-items: center;
+}
 /* ... */
 
 

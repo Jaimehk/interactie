@@ -12,10 +12,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Jaime Hoogland Kolk
+Sanne 't Hooft (vervangen door jouw naam)
 
 #### Je startniveau:
-Blauw
+Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 
 
@@ -26,16 +26,15 @@ Blauw
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img width="1033" alt="Eerste schets:process" src="https://user-images.githubusercontent.com/122603817/232707800-c4ad4a6e-2bbb-45e3-9cef-5cd0a47edd4d.png">
-
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - Mijn eerste code opdracht maken
-  - Een functionerend ontwerp neerzetten
-  - Leren hoe ik interactieve code maak
-  - In code leren animeren
+  - punt 1
+  - punt 2
+  - nog een punt
+  - ...
  
 </details>
 
