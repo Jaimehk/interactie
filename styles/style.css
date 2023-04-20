@@ -40,64 +40,239 @@ h1 {
   text-align: center;
 }
 
-.parent {
+ul.parent {
+  /* ruimte verdelen over de kinderen */
   display: grid;
-  grid-gap: .6em;
-  grid-template-columns: 9em 9em 9em;
-  grid-template-rows: 9em 9em 9em;
+  grid-gap:;
+  grid-template-columns: 6fr 12fr 6fr;
+  grid-template-rows: 6fr 4fr;
 
-  position: absolute;
+  /* hele scherm vullen */
+  position:fixed;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
+/* LINKSBOVEN KOLOM */
 .parent > .knoppen {
   padding: 1em;
-  background-color:yellow;
-  border-radius: 1em;
+  background-color:#575756;
+  border-radius:;
 
   display: grid;
   place-items: center;
 }
+/* LINKER RECHTHOEK */
+.rechthoek {
+  position: absolute;
+  background-color: #999998;
+  
+  padding:;
 
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  width: 15%;
+  height: 50%;
+
+  border-style: ridge;
+  border-width: thin;
+  border-radius: 10%;
+  box-shadow: 
+    inset .1em .1em .1em white,
+    inset -.1em -.1em 1em black;
+}
+
+
+/* MIDDELSTE KOLOM */
 .parent > .scherm {
-  background-color: darkslategray;
+  position: relative;
+  background-color: #3C3C3B;
   text-transform: uppercase;
   color: aliceblue;
 
   display: grid;
   place-items: center;
+
+}
+/* TABLET IN SCHERM */
+.scherm > .tablet {
+  position: absolute;
+  background-color: #999998;
+  
+  padding:;
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  width: 85%;
+  height: 80%;
+
+  border-radius: 10%;
+  box-shadow: 
+    inset .1em .1em .1em white,
+    inset -.1em -.1em 1em black;
+     
 }
 
+
+/* TABLET SCHERMPJE */
+.tablet2 {
+  position: absolute;
+  background-color: #575756;
+
+  margin: auto;
+  top: 10%;
+  left: 10%;
+
+  width: 80%;
+  height: 80%;
+  border-radius: 10%;
+
+  box-shadow: 
+    inset -.1em -.1em 1em black,
+    inset .1em .1em .1em white;
+
+    }
+
+.imageA1 {
+  position: absolute;
+  width:20%;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+
+    }
+
+
+/* RECHTSBOVEN KOLOM */
 .parent .comms {
-  background-color: red;
+  background-color: #575756;
   color: aliceblue;
 
   display: grid;
   place-items: center;
 }
+/* RECHTER KOLOM PANEL */
+.panel-right {
+    width: 25em;
+    height: 20em;
 
+    margin-left: 2em;
+    margin: 2em;
+
+    border: ridge;
+    border-width: thin;
+    box-sizing: content-box;
+    padding-top: 15px;
+    position: relative;
+    background: #333;
+    rotate: 90deg;
+
+    box-shadow: 
+    inset -.1em -.1em 1em black,
+    inset .1em .1em .1em white;
+  }
+  /* RECHTER WITTE STREEPJE */
+  .panel-right:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 4em;
+    height: 4em;
+    border-bottom: 13px solid #fff;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+
+  }
+
+/* LINKSONDER KOLOM */
 .parent .attack {
-  background-color: gray;
+  position: relative;
+  background-color: #AEAEAE;
   color: aliceblue;
 
   display: grid;
   place-items: center;
 }
 
+.vierkant {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  background-image: radial-gradient(circle, rgba(255,122,122,1) 20%, rgba(206,34,38,1) 71%);
+  width: 8em;
+  height: 8em;
+}
+
+.vierkant2 {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  background-image: radial-gradient(circle, rgba(179,192,255,1) 20%, rgba(125,146,252,1) 71%);
+  width: 8em;
+  height: 8em;
+}
+
+.vierkant3 {
+  position: absolute;
+  bottom: 10%;
+  left: 55%;
+  background-image: radial-gradient(circle, rgba(174,226,217,1) 20%, rgba(68,198,175,1) 71%);
+  width: 8em;
+  height: 8em;
+}
+
+.vierkant4 {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  background-image: radial-gradient(circle, rgba(254,255,132,1) 20%, rgba(255,240,39,1) 71%);
+  width: 8em;
+  height: 8em;
+}
+
+/* ONDERSTE KOLOM */
 .parent .navigatie {
-  background-color: dodgerblue;
+  position: relative;
+  background-color: #838383;
   color: aliceblue;
 
   display: grid;
   place-items: center;
 }
 
+/* DESKTOP */
+.ImageDesktop {
+  position: absolute;
+  width: 80%;
+  height: 75%;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+
+  /* filter: drop-shadow(.5em .5em .5em) */
+
+    /* inset -.5em -.5em 5em teal,
+    inset .5em .5em .5em white; */
+  
+}
+/* RECHTSONDER KOLOM */
 .parent .kaart {
-  background-color: darkgray;
+  background-color: #AEAEAE;
   color: aliceblue;
 
   display: grid;
   place-items: center;
 }
+
 /* ... */
 
 
+}
