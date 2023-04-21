@@ -24,9 +24,26 @@ button:not([disabled]) {
 /*********************/
 
 :root {
-  --color-headings:crimson
-}
+  --color-headings:crimson;
+  --drieD-schaduw: inset -.1em -.1em 1em black, inset .1em .1em .1em white;
+  --kleineDrieDschaduw: inset .1em .1em .1em white, inset -.1em -.1em 1em black;
+  --tabletgrijs: #999998;
+  --grijsvlak: #575756;
+  --systeemkleur: #333;
+  --radarkleur: #318947;
+  --wit: #fff; 
+  --bgscherm:#3C3C3B;
+  --attackbg: #AEAEAE; 
+  --radialrood: radial-gradient(circle, rgba(255,122,122,1) 20%, rgba(206,34,38,1) 71%);
+  --radialblauw: radial-gradient(circle, rgba(179,192,255,1) 20%, rgba(125,146,252,1) 71%);
+  --radialgroen: radial-gradient(circle, rgba(174,226,217,1) 20%, rgba(68,198,175,1) 71%);
+  --radialgeel: radial-gradient(circle, rgba(254,255,132,1) 20%, rgba(255,240,39,1) 71%);
+  --navbg: #838383;
+  --radialgrijs: radial-gradient(circle, rgba(68,68,68,1) 10%, rgba(33,33,33,1) 71%);
+  --textkleur: #2BA827; 
+  --speaker: linear-gradient(180deg, rgba(24,24,31,1) 8%, rgba(33,33,37,1) 8%, rgba(91,91,92,1) 15%, rgba(34,34,34,1) 15%, rgba(51,51,51,1) 21%, rgba(52,52,52,1) 21%, rgba(62,62,62,1) 30%, rgba(15,11,11,1) 30%, rgba(25,21,21,1) 37%, rgba(5,4,4,1) 37%, rgba(82,82,82,1) 46%, rgba(99,99,99,1) 46%, rgba(83,83,83,1) 56%, rgba(22,22,22,1) 56%, rgba(13,12,12,1) 64%, rgba(113,113,113,1) 64%, rgba(38,37,37,1) 71%, rgba(0,0,0,1) 71%, rgba(0,0,0,1) 78%, rgba(84,84,84,1) 78%, rgba(115,115,115,1) 86%, rgba(19,19,19,1) 86%, rgba(33,33,33,1) 94%, rgba(66,66,66,1) 94%);
 
+} 
 
 
 
@@ -61,40 +78,89 @@ ul.parent {
 /* LINKSBOVEN KOLOM */
 .parent > .knoppen {
   padding: 1em;
-  background-color:#575756;
+  background-color: var(--grijsvlak);
   border-radius:;
 
   display: grid;
   place-items: center;
+
 }
 /* LINKER RECHTHOEK */
 .rechthoek {
   position: absolute;
-  background-color: #999998;
+  background-color: var(--tabletgrijs);
   
   padding:;
 
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 
-  width: 15%;
-  height: 50%;
+  width: 20%;
+  height: 49%;
 
   border-style: ridge;
   border-width: thin;
   border-radius: 10%;
-  box-shadow: 
-    inset .1em .1em .1em white,
-    inset -.1em -.1em 1em black;
+  box-shadow: var(--kleineDrieDschaduw)
+   
 }
 
+.alarm {
+  position: absolute;
+  top: 14%;
+  bottom: 13%;
+  left: 5%;
+  
+  background-image: var(--radialrood);
+  
+  width: 4em;
+  height: 4em;
+  
+  border-style:solid;
+  border-radius: 100%;
+  border-color: var(--bgscherm);
+  border-width: .2em;
+
+  transform: translate(10%,-70%);
+
+  box-shadow: var(--drieD-schaduw)
+}
+
+.alarm2 {
+  position: absolute;
+  top: 25%;
+  bottom: 40%;
+  right: 90%;
+
+  background-image: var(--radialrood);
+
+  width: 4em;
+  height: 4em;
+  
+  border-style:solid;
+  border-radius: 100%;
+  border-color: var(--bgscherm);
+  border-width: .2em;
+
+  transform: translate(100%,-245%);
+
+  box-shadow: var(--drieD-schaduw) 
+}
+
+.speaker {
+  position: absolute;
+  bottom: 50%;
+  width: 18em;
+  height: 9em;
+  background-image: var(--speaker)
+}
 
 /* MIDDELSTE KOLOM */
 .parent > .scherm {
   position: relative;
-  background-color: #3C3C3B;
-  text-transform: uppercase;
-  color: aliceblue;
+  background-color: var(--bgscherm);
+  /* text-transform: uppercase; */
+  /* color: aliceblue; */
 
   display: grid;
   place-items: center;
@@ -103,7 +169,7 @@ ul.parent {
 /* TABLET IN SCHERM */
 .scherm > .tablet {
   position: absolute;
-  background-color: #999998;
+  background-color: var(--tabletgrijs);
   
   padding:;
 
@@ -114,17 +180,14 @@ ul.parent {
   height: 80%;
 
   border-radius: 10%;
-  box-shadow: 
-    inset .1em .1em .1em white,
-    inset -.1em -.1em 1em black;
-     
+  box-shadow: var(--kleineDrieDschaduw);
 }
 
 
 /* TABLET SCHERMPJE */
 .tablet2 {
   position: absolute;
-  background-color: #575756;
+  background-color: var(--grijsvlak);
 
   margin: auto;
   top: 10%;
@@ -134,10 +197,7 @@ ul.parent {
   height: 80%;
   border-radius: 10%;
 
-  box-shadow: 
-    inset -.1em -.1em 1em black,
-    inset .1em .1em .1em white;
-
+  box-shadow: var(--drieD-schaduw);
     }
 
 .imageA1 {
@@ -152,8 +212,8 @@ ul.parent {
 
 /* RECHTSBOVEN KOLOM */
 .parent .comms {
-  background-color: #575756;
-  color: aliceblue;
+  background-color: var(--grijsvlak);
+  /* color: aliceblue; */
 
   display: grid;
   place-items: center;
@@ -161,7 +221,7 @@ ul.parent {
 /* RECHTER KOLOM PANEL */
 .panel-right {
     width: 25em;
-    height: 20em;
+    height: 28em;
 
     margin-left: 2em;
     margin: 2em;
@@ -171,32 +231,63 @@ ul.parent {
     box-sizing: content-box;
     padding-top: 15px;
     position: relative;
-    background: #333;
-    rotate: 90deg;
+    background: var(--systeemkleur);
+    rotate: 0deg;
 
-    box-shadow: 
-    inset -.1em -.1em 1em black,
-    inset .1em .1em .1em white;
+    position: relative;
+
+    box-shadow: var(--kleineDrieDschaduw)
   }
+
+  .scanlines {
+    width: 100px;
+    height: 100px;
+  }
+
+  .panel-right > h2 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 1%;
+    bottom: 0;
+    rotate:0;
+
+    margin: 10px;
+    padding: 10px;
+
+    color: var(--textkleur);
+  }
+
+  .panel-right > p {
+    position: absolute;
+    bottom: 8%;
+    padding: 10px;
+    margin: 10px;
+    color: var(--textkleur);
+    line-height: 1.5;
+    font-size: 15px;
+  }
+
   /* RECHTER WITTE STREEPJE */
   .panel-right:after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 85%;
     width: 4em;
     height: 4em;
-    border-bottom: 13px solid #fff;
+    border-bottom: 13px solid var(--wit);
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
+    rotate: 90deg;
 
   }
 
 /* LINKSONDER KOLOM */
 .parent .attack {
   position: relative;
-  background-color: #AEAEAE;
-  color: aliceblue;
+  background-color: var(--attackbg);
+  /* color: aliceblue; */
 
   display: grid;
   place-items: center;
@@ -206,43 +297,51 @@ ul.parent {
   position: absolute;
   top: 10%;
   left: 15%;
-  background-image: radial-gradient(circle, rgba(255,122,122,1) 20%, rgba(206,34,38,1) 71%);
+  background-image: var(--radialrood);
   width: 8em;
   height: 8em;
+
+   box-shadow: var(--drieD-schaduw);
 }
 
 .vierkant2 {
   position: absolute;
   bottom: 10%;
   left: 15%;
-  background-image: radial-gradient(circle, rgba(179,192,255,1) 20%, rgba(125,146,252,1) 71%);
+  background-image: var(--radialblauw);
   width: 8em;
   height: 8em;
+
+  box-shadow: var(--drieD-schaduw);
 }
 
 .vierkant3 {
   position: absolute;
   bottom: 10%;
   left: 55%;
-  background-image: radial-gradient(circle, rgba(174,226,217,1) 20%, rgba(68,198,175,1) 71%);
+  background-image: var(--radialgroen);
   width: 8em;
   height: 8em;
+
+  box-shadow: var(--drieD-schaduw);
 }
 
 .vierkant4 {
   position: absolute;
   top: 10%;
   left: 55%;
-  background-image: radial-gradient(circle, rgba(254,255,132,1) 20%, rgba(255,240,39,1) 71%);
+  background-image: var(--radialgeel);
   width: 8em;
   height: 8em;
+
+  box-shadow: var(--drieD-schaduw);
 }
 
 /* ONDERSTE KOLOM */
 .parent .navigatie {
   position: relative;
-  background-color: #838383;
-  color: aliceblue;
+  background-color: var(--navbg);
+  /* color: aliceblue; */
 
   display: grid;
   place-items: center;
@@ -251,27 +350,286 @@ ul.parent {
 /* DESKTOP */
 .ImageDesktop {
   position: absolute;
-  width: 80%;
+  width: 85%;
   height: 75%;
   left:50%;
   top:50%;
   transform: translate(-50%,-50%);
 
-  /* filter: drop-shadow(.5em .5em .5em) */
+  /* filter:brightness(150%); */
 
-    /* inset -.5em -.5em 5em teal,
-    inset .5em .5em .5em white; */
+  /* filter: drop-shadow(.5em .5em .5em) */
+}
+
+.slider-box {
+  background-color: var(--bgscherm);
+  position: absolute;
+  width: 25%;
+  height: 60%;
+  left:22.5%;
+  top:50%;
+  transform: translate(-50%,-50%);
+
+  box-shadow: var(--drieD-schaduw)
   
 }
+
+.Slider-1 {
+  position: absolute;
+  left: 12%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.Slider-2 {
+  position: absolute;
+  left: 21%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.Slider-3 {
+  position: absolute;
+  left: 29%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.slider-box2 {
+  background-color: var(--bgscherm);
+  position: absolute;
+  width: 20%;
+  height: 60%;
+  right:22%;
+  top:50%;
+  transform: translate(60%,-50%);
+
+  box-shadow: var(--drieD-schaduw)
+}
+
+.Slider-4 {
+  position: absolute;
+  right: 11.5%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.Slider-5 {
+  position: absolute;
+  right: 18%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.Slider-6 {
+  position: absolute;
+  right: 24.5%;
+  background-color: var(--grijsvlak);
+  width: 2.5em;
+  height: 14em;
+}
+
+.box-slider-1 {
+position: absolute;
+left: 11.5%;
+background-image: var(--radialrood);
+width: 3em;
+height: 4em;
+}
+
+.box-slider-2 {
+  position: absolute;
+  left: 20.5%;
+  top: 22%;
+  background-image: var(--radialrood);
+  width: 3em;
+  height: 4em;
+  }
+
+.box-slider-3 {
+  position: absolute;
+  left: 28.5%;
+  bottom: 26%;
+  background-image: var(--radialrood);
+  width: 3em;
+  height: 4em;
+}
+
+.box-slider-4 {
+  position: absolute;
+  right: 11%;
+  bottom: 26%;
+  background-image: var(--radialgeel);
+  width: 3em;
+  height: 4em;
+ }
+
+ .box-slider-5 {
+  position: absolute;
+  right: 17.5%;
+  bottom: 45%;
+  background-image: var(--radialblauw);
+  width: 3em;
+  height: 4em;
+ }
+ .box-slider-6 {
+  position: absolute;
+  right: 24%;
+  bottom: 60%;
+  background-image: var(--radialgroen);
+  width: 3em;
+  height: 4em;
+ }
+
+.Red-button {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  
+  background-image: var(--radialrood);
+  
+  width: 10em;
+  height: 10em;
+  
+  border-radius: 100%;
+  border-style:inset;
+  border-color: var(--navbg);
+  border-width: 1em;
+
+  transform: translate(10%,-70%);
+
+  box-shadow: var(--drieD-schaduw)
+}
+
 /* RECHTSONDER KOLOM */
 .parent .kaart {
-  background-color: #AEAEAE;
-  color: aliceblue;
+  position: relative;
+  background-color: var(--attackbg);
+  /* color: aliceblue; */
 
   display: grid;
   place-items: center;
 }
 
+.radar {
+  position: absolute;
+  top: 10%;
+  background-color: var(--bgscherm);
+  border-radius: 10%;
+  background-image: var(--radialgrijs);
+  width: 20em;
+  height: 20em;
+
+  box-shadow: var(--drieD-schaduw);
+}
+
+.radar-kaart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 19em;
+  height: 19em;
+  border: var(--radarkleur);
+  border-style: solid;
+  border-width: .4em;
+}
+
+.radar-inhoud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 100%;
+  width: 15em;
+  height: 15em;
+  border: var(--radarkleur);
+  border-style: solid;
+  border-width: .2em;
+}
+
+.radar-inhoud2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 100%;
+  width: 12em;
+  height: 12em;
+  border: var(--radarkleur);
+  border-style: solid;
+  border-width: .2em;
+}
+
+.radar-inhoud3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 100%;
+  width: 9em;
+  height: 9em;
+  border: var(--radarkleur);
+  border-style: solid;
+  border-width: .2em;
+}
+
+.radar-inhoud4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border-radius: 100%;
+  width: 6em;
+  height: 6em;
+  border: var(--radarkleur);
+  border-style: solid;
+  border-width: .2em;
+}
+
+.radar-inhoud5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: var(--radarkleur);
+  border-radius: 100%;
+  background-image: var(--radialblauw);
+  width: 3em;
+  height: 3em;
+}
+
+.enemy1 {
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  background-image: var(--radialrood);
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.enemy2 {
+  position: absolute;
+  bottom: 17%;
+  right: 28%;
+  transform: translate(-50%, -50%);
+  background-image: var(--radialrood);
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+}
 /* ... */
 
 
