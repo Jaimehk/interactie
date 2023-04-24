@@ -75,6 +75,18 @@ ul.parent {
   padding: 0;
   list-style: none;
 }
+
+li .parent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+}
 /* LINKSBOVEN KOLOM */
 .parent > .knoppen {
   padding: 1em;
@@ -129,7 +141,7 @@ ul.parent {
 .alarm2 {
   position: absolute;
   top: 25%;
-  bottom: 40%;
+  bottom: 50%;
   right: 90%;
 
   background-image: var(--radialrood);
@@ -238,11 +250,7 @@ ul.parent {
 
     box-shadow: var(--kleineDrieDschaduw)
   }
-
-  .scanlines {
-    width: 100px;
-    height: 100px;
-  }
+  
 
   .panel-right > h2 {
     position: absolute;
@@ -255,9 +263,26 @@ ul.parent {
     margin: 10px;
     padding: 10px;
 
+    border-right: var(--radarkleur);
+   
+
     color: var(--textkleur);
+
+    font-family: monospace;
+
+    animation: typer 5s steps(30, end), blink-caret .5s step-end infinite;
   }
 
+  /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+  @keyframes typer {
+    from { width: 0 }
+  to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
   .panel-right > p {
     position: absolute;
     bottom: 8%;
@@ -265,7 +290,11 @@ ul.parent {
     margin: 10px;
     color: var(--textkleur);
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 12px;
+
+    font-family: monospace;
+
+    animation: typer 15s;
   }
 
   /* RECHTER WITTE STREEPJE */
@@ -298,19 +327,36 @@ ul.parent {
   top: 10%;
   left: 15%;
   background-image: var(--radialrood);
-  width: 8em;
-  height: 8em;
+  width: 9em;
+  height: 9em;
 
    box-shadow: var(--drieD-schaduw);
+
+   animation-name: flicker;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
 }
+@keyframes flicker {
+  10% { opacity: 1; }
+20% { opacity: 0.5; }
+30% { opacity: 0.7; }
+40% { opacity: 0.1; }
+50% { opacity: 0.4; }
+60% { opacity: 0.8; }
+70% { opacity: 0.2; }
+80% { opacity: 0.6; }
+90% { opacity: 0.9;}
+100% { opacity: 0.5;}
+}
+
 
 .vierkant2 {
   position: absolute;
   bottom: 10%;
   left: 15%;
   background-image: var(--radialblauw);
-  width: 8em;
-  height: 8em;
+  width: 9em;
+  height: 9em;
 
   box-shadow: var(--drieD-schaduw);
 }
@@ -320,8 +366,8 @@ ul.parent {
   bottom: 10%;
   left: 55%;
   background-image: var(--radialgroen);
-  width: 8em;
-  height: 8em;
+  width: 9em;
+  height: 9em;
 
   box-shadow: var(--drieD-schaduw);
 }
@@ -331,8 +377,8 @@ ul.parent {
   top: 10%;
   left: 55%;
   background-image: var(--radialgeel);
-  width: 8em;
-  height: 8em;
+  width: 9em;
+  height: 9em;
 
   box-shadow: var(--drieD-schaduw);
 }
@@ -379,7 +425,7 @@ ul.parent {
   left: 12%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .Slider-2 {
@@ -387,7 +433,7 @@ ul.parent {
   left: 21%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .Slider-3 {
@@ -395,7 +441,7 @@ ul.parent {
   left: 29%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .slider-box2 {
@@ -415,7 +461,7 @@ ul.parent {
   right: 11.5%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .Slider-5 {
@@ -423,7 +469,7 @@ ul.parent {
   right: 18%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .Slider-6 {
@@ -431,36 +477,75 @@ ul.parent {
   right: 24.5%;
   background-color: var(--grijsvlak);
   width: 2.5em;
-  height: 14em;
+  height: 13em;
 }
 
 .box-slider-1 {
-position: absolute;
-left: 11.5%;
-background-image: var(--radialrood);
-width: 3em;
-height: 4em;
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
+  position: absolute;
+  left: 11.5%;
+  background-image: var(--radialrood);
+  width: 3em;
+  height: 4em;
+
+  transition: 1s; 
 }
 
+ .slideSlider {
+  transform: translateY(80px);
+ }
+
+ .slideSlider2 {
+  transform: translateY(159px);
+ }
+
+ .box-slider-3.slideSlider3 {
+  transform: translateY(-161px);
+  
+ }
+
 .box-slider-2 {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   left: 20.5%;
   top: 22%;
   background-image: var(--radialrood);
   width: 3em;
   height: 4em;
+
+  transition: 1s;
   }
 
 .box-slider-3 {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   left: 28.5%;
-  bottom: 26%;
+  bottom: 22%;
   background-image: var(--radialrood);
   width: 3em;
   height: 4em;
+
+  transition: 1s;
 }
 
 .box-slider-4 {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   right: 11%;
   bottom: 26%;
@@ -470,6 +555,11 @@ height: 4em;
  }
 
  .box-slider-5 {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   right: 17.5%;
   bottom: 45%;
@@ -478,6 +568,11 @@ height: 4em;
   height: 4em;
  }
  .box-slider-6 {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   right: 24%;
   bottom: 60%;
@@ -487,14 +582,19 @@ height: 4em;
  }
 
 .Red-button {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1em; 
+
   position: absolute;
   top: 50%;
   bottom: 50%;
   
   background-image: var(--radialrood);
   
-  width: 10em;
-  height: 10em;
+  width: 10.5em;
+  height: 10.5em;
   
   border-radius: 100%;
   border-style:inset;
@@ -503,7 +603,11 @@ height: 4em;
 
   transform: translate(10%,-70%);
 
-  box-shadow: var(--drieD-schaduw)
+  box-shadow: var(--drieD-schaduw);
+
+  cursor: pointer;
+
+  filter: blur(40%);
 }
 
 /* RECHTSONDER KOLOM */
@@ -616,8 +720,8 @@ height: 4em;
   transform: translate(-50%, -50%);
   background-image: var(--radialrood);
   border-radius: 100%;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
 }
 
 .enemy2 {
@@ -627,10 +731,10 @@ height: 4em;
   transform: translate(-50%, -50%);
   background-image: var(--radialrood);
   border-radius: 100%;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
 }
 /* ... */
 
 
-}
+
