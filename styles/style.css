@@ -42,7 +42,11 @@ button:not([disabled]) {
   --radialgrijs: radial-gradient(circle, rgba(68,68,68,1) 10%, rgba(33,33,33,1) 71%);
   --textkleur: #2BA827; 
   --speaker: linear-gradient(180deg, rgba(24,24,31,1) 8%, rgba(33,33,37,1) 8%, rgba(91,91,92,1) 15%, rgba(34,34,34,1) 15%, rgba(51,51,51,1) 21%, rgba(52,52,52,1) 21%, rgba(62,62,62,1) 30%, rgba(15,11,11,1) 30%, rgba(25,21,21,1) 37%, rgba(5,4,4,1) 37%, rgba(82,82,82,1) 46%, rgba(99,99,99,1) 46%, rgba(83,83,83,1) 56%, rgba(22,22,22,1) 56%, rgba(13,12,12,1) 64%, rgba(113,113,113,1) 64%, rgba(38,37,37,1) 71%, rgba(0,0,0,1) 71%, rgba(0,0,0,1) 78%, rgba(84,84,84,1) 78%, rgba(115,115,115,1) 86%, rgba(19,19,19,1) 86%, rgba(33,33,33,1) 94%, rgba(66,66,66,1) 94%);
-
+  --glowRed: 0px 0px 50px 10px rgba(206,34,37,0.69); 
+  --glowYellow: 0px 0px 50px 10px rgba(254,255,132,1);
+  --glowBlauw: 0px 0px 50px 10px  rgba(179,192,255,1);
+  --glowGroen:  0px 0px 50px 10px  rgba(174,226,217,1);
+  --rood: #CE2226;
 } 
 
 
@@ -101,8 +105,6 @@ li .parent {
 .rechthoek {
   position: absolute;
   background-color: var(--tabletgrijs);
-  
-  padding:;
 
   margin-top: 1em;
   margin-bottom: 1em;
@@ -140,7 +142,7 @@ li .parent {
 
 .alarm2 {
   position: absolute;
-  top: 25%;
+  top: 25.5%;
   bottom: 50%;
   right: 90%;
 
@@ -183,10 +185,10 @@ li .parent {
   position: absolute;
   background-color: var(--tabletgrijs);
   
-  padding:;
+  padding:5%;
 
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 
   width: 85%;
   height: 80%;
@@ -198,30 +200,31 @@ li .parent {
 
 /* TABLET SCHERMPJE */
 .tablet2 {
-  position: absolute;
   background-color: var(--grijsvlak);
-
-  margin: auto;
-  top: 10%;
-  left: 10%;
-
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 10%;
 
   box-shadow: var(--drieD-schaduw);
-    }
 
-.imageA1 {
-  position: absolute;
+  display:grid;
+  justify-items:center;
+  align-items: center;
+}
+
+.deHelm {
   width:20%;
-  left:50%;
-  top:50%;
-  transform: translate(-50%,-50%);
-
-    }
+  }  
 
 
+@keyframes zichtbaar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 /* RECHTSBOVEN KOLOM */
 .parent .comms {
   background-color: var(--grijsvlak);
@@ -231,11 +234,11 @@ li .parent {
   place-items: center;
 }
 /* RECHTER KOLOM PANEL */
-.panel-right {
+.parent .panel-right {
     width: 25em;
     height: 28em;
 
-    margin-left: 2em;
+    margin-left: 2.5em;
     margin: 2em;
 
     border: ridge;
@@ -260,17 +263,19 @@ li .parent {
     bottom: 0;
     rotate:0;
 
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
+
+    border-right: .15em solid #2BA827;
+    white-space: nowrap;
 
     border-right: var(--radarkleur);
    
-
     color: var(--textkleur);
 
     font-family: monospace;
 
-    animation: typer 5s steps(30, end), blink-caret .5s step-end infinite;
+    animation: typer 5s steps(15, end), blink-caret .5s step-end infinite;
   }
 
   /* https://css-tricks.com/snippets/css/typewriter-effect/ */ 
@@ -279,10 +284,6 @@ li .parent {
   to { width: 100% }
   }
 
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
   .panel-right > p {
     position: absolute;
     bottom: 8%;
@@ -319,69 +320,60 @@ li .parent {
   /* color: aliceblue; */
 
   display: grid;
-  place-items: center;
+  grid-template-columns: 9em 9em;
+  gap:10%;
+  place-content: center;
 }
+
+.parent .attack button {
+  aspect-ratio: 1/1;
+  box-shadow: var(--drieD-schaduw);
+}
+
+.parent .attack button img {
+  width:60%;
+  opacity: 30%;
+}
+
+.parent .attack button img:hover {
+  opacity: 80%;
+  transform: rotate(360deg);
+}
+
 
 .vierkant {
-  position: absolute;
-  top: 10%;
-  left: 15%;
   background-image: var(--radialrood);
-  width: 9em;
-  height: 9em;
-
-   box-shadow: var(--drieD-schaduw);
-
-   animation-name: flicker;
-   animation-duration: 4s;
-   animation-iteration-count: infinite;
-}
-@keyframes flicker {
-  10% { opacity: 1; }
-20% { opacity: 0.5; }
-30% { opacity: 0.7; }
-40% { opacity: 0.1; }
-50% { opacity: 0.4; }
-60% { opacity: 0.8; }
-70% { opacity: 0.2; }
-80% { opacity: 0.6; }
-90% { opacity: 0.9;}
-100% { opacity: 0.5;}
 }
 
+.parent .attack .vierkant:hover {
+ box-shadow: var(--glowRed);
+}
 
 .vierkant2 {
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
   background-image: var(--radialblauw);
-  width: 9em;
-  height: 9em;
-
-  box-shadow: var(--drieD-schaduw);
 }
+
+.parent .attack .vierkant2:hover {
+  box-shadow: var(--glowBlauw);
+ }
 
 .vierkant3 {
-  position: absolute;
-  bottom: 10%;
-  left: 55%;
   background-image: var(--radialgroen);
-  width: 9em;
-  height: 9em;
-
-  box-shadow: var(--drieD-schaduw);
 }
+
+.parent .attack .vierkant3:hover {
+  box-shadow: var(--glowGroen);
+ }
 
 .vierkant4 {
-  position: absolute;
-  top: 10%;
-  left: 55%;
   background-image: var(--radialgeel);
-  width: 9em;
-  height: 9em;
-
-  box-shadow: var(--drieD-schaduw);
 }
+
+.parent .attack .vierkant4:hover {
+  box-shadow: var(--glowYellow);
+ }
+
+
 
 /* ONDERSTE KOLOM */
 .parent .navigatie {
@@ -494,19 +486,36 @@ li .parent {
 
   transition: 1s; 
 }
-
+/* VOOR JAVASCRIPT SLIDERS */
  .slideSlider {
   transform: translateY(80px);
  }
 
  .slideSlider2 {
-  transform: translateY(159px);
+  transform: translateY(152px);
  }
 
  .box-slider-3.slideSlider3 {
-  transform: translateY(-161px);
-  
+  transform: translateY(-150px);
  }
+
+  .slideSlider4 {
+  transform: translateY(-150px);
+ }
+
+ .slideSlider4 {
+  transform: translateY(-150px);
+ }
+
+ .slideSlider5 {
+  transform: translateY(-150px);
+ }
+
+ .slideSlider6 {
+  transform: translateY(-150px);
+ }
+
+
 
 .box-slider-2 {
   appearance: none;
@@ -516,7 +525,7 @@ li .parent {
 
   position: absolute;
   left: 20.5%;
-  top: 22%;
+  top: 23%;
   background-image: var(--radialrood);
   width: 3em;
   height: 4em;
@@ -532,7 +541,7 @@ li .parent {
 
   position: absolute;
   left: 28.5%;
-  bottom: 22%;
+  bottom: 21.5%;
   background-image: var(--radialrood);
   width: 3em;
   height: 4em;
@@ -548,10 +557,12 @@ li .parent {
 
   position: absolute;
   right: 11%;
-  bottom: 26%;
+  bottom: 21%;
   background-image: var(--radialgeel);
   width: 3em;
   height: 4em;
+
+  transition: 1s;
  }
 
  .box-slider-5 {
@@ -562,10 +573,12 @@ li .parent {
 
   position: absolute;
   right: 17.5%;
-  bottom: 45%;
+  bottom: 21%;
   background-image: var(--radialblauw);
   width: 3em;
   height: 4em;
+
+  transition: 1s;
  }
  .box-slider-6 {
   appearance: none;
@@ -575,26 +588,23 @@ li .parent {
 
   position: absolute;
   right: 24%;
-  bottom: 60%;
+  bottom: 21%;
   background-image: var(--radialgroen);
   width: 3em;
   height: 4em;
+
+  transition: 1s;
  }
 
 .Red-button {
-  appearance: none;
-  background: none;
-  border: none;
-  font-size: 1em; 
-
   position: absolute;
   top: 50%;
   bottom: 50%;
   
   background-image: var(--radialrood);
   
-  width: 10.5em;
-  height: 10.5em;
+  width: 11.5em;
+  height: 11.5em;
   
   border-radius: 100%;
   border-style:inset;
@@ -604,10 +614,10 @@ li .parent {
   transform: translate(10%,-70%);
 
   box-shadow: var(--drieD-schaduw);
+}
 
-  cursor: pointer;
-
-  filter: blur(40%);
+.Red-button:hover {
+  filter:drop-shadow(0 0 0.75rem var(--rood));
 }
 
 /* RECHTSONDER KOLOM */
@@ -722,6 +732,17 @@ li .parent {
   border-radius: 100%;
   width: 2em;
   height: 2em;
+
+  animation: circle 5s linear infinite;
+}
+
+@keyframes circle {
+  from{
+    transform: rotate(0deg)translate(-50%);
+}
+to{
+    transform:rotate(360deg)translate(-50%);
+}
 }
 
 .enemy2 {
@@ -734,6 +755,11 @@ li .parent {
   width: 2em;
   height: 2em;
 }
+
+
+
+
+
 /* ... */
 
 
