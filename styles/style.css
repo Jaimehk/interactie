@@ -13,7 +13,8 @@ body {
 
 button {
   cursor:pointer;
-  outline:none;
+  outline: none;
+  /* animation: lightsaber 1s ease delay infinite; */
 }
 
 /*********************/
@@ -363,6 +364,14 @@ li .parent {
   
 }
 
+@keyframes lightsaber {
+  0% {
+    filter: drop-shadow(0 0 0 .75rem blue);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 blue);
+  }
+}
 
 /* VIERKANTEN KNOPPEN  */
 .vierkant {
