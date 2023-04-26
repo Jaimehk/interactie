@@ -45,34 +45,6 @@ kaart.addEventListener('mouseout', () => {
 });
 
 
-
-
-
-// RED BUTTEN//
-var RedButton = document.querySelector(".Red-button");
-
-RedButton.addEventListener("click", NextHelm1);
-RedButton.addEventListener("click", NextHelm2);
-RedButton.addEventListener("click", NextHelm3);
-RedButton.addEventListener("click", NextHelm4);
-
-function NextHelm1() {
-    deHelm.src = "images/Phase1.png"; 
-}
-
-function NextHelm2() {
-    deHelm.src = "images/phase2.png";
-}
-
-function NextHelm3() {
-    deHelm.src = "images/stormtrooper.png";
-}
-
-function NextHelm4() {
-    deHelm.src = "images/first-order.png";
-}
-
-
 // VIERKANTEN
 
 var deHelm = document.querySelector(".deHelm");
@@ -113,3 +85,63 @@ function goHelm4() {
     helmH2.textContent = "kop 4";
     helmP.textContent = "fase 4 tekst";
 }
+
+
+// RED BUTTEN// // VIDEO CODE VAN LEONIE WAGNER
+var RedButton = document.querySelector(".Red-button");
+var video1 = document.querySelector("#video");
+var showVid = document.querySelector(".showVideo");
+
+RedButton.addEventListener("click", playVideo);
+RedButton.addEventListener("click", showVid)
+
+
+function playVideo () {
+if (video1.paused) {
+    video1.play();
+    video1.classList.add("playing");
+    }
+else {
+    video1.pause();
+    video1.classList.remove("playing");
+    }
+}
+
+function showVid() {
+    showVid.classList.toggle("showVid") 
+}
+
+
+// AUDIO 2
+RedButton.addEventListener('mouseover', () => {
+    // console.log("over");
+    MoveAlong.play();
+});
+
+// Pauzeer het MP3-bestand 
+RedButton.addEventListener('mouseout', () => {
+    // console.log("out");
+    MoveAlong.pause();
+});
+
+
+// function showVideo () {
+// if (video1.style.display === "none") {
+//     video1.style.display = "none"
+//     }    
+      
+// else {
+//     video1.style.display = "none";
+//     }
+// }
+
+
+// function hidVideo () {
+// if (video1.style.display === "block") {
+//     video1.style.display = "block"
+//     }    
+      
+// else {
+//      video1.style.display = "block";
+//      }
+//  }
