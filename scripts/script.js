@@ -93,7 +93,6 @@ var video1 = document.querySelector("#video");
 var showVid = document.querySelector(".showVideo");
 
 RedButton.addEventListener("click", playVideo);
-RedButton.addEventListener("click", showVid)
 
 
 function playVideo () {
@@ -107,9 +106,6 @@ else {
     }
 }
 
-function showVid() {
-    showVid.classList.toggle("showVid") 
-}
 
 
 // AUDIO 2
