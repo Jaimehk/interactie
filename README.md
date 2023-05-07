@@ -53,21 +53,18 @@ Blauw
   #### oplossing:
   Ik ging verder zoeken in de star wars scene en kwam al snel op helmen van Clones terecht. Ik heb de clones en heel het concept daaromheen altijd interssant gevonden dus dit sloot mooi aan op mijn interesse.
 
-
-
   ### Bevinding 2:
   Ik begon met schetsen van verschillende interfaces die je zou kunnen hebben in de star wars wereld. Ik wilde iets wat logisch was en bij star wars paste en iets waar ik trots op kon zijn als design. 
 
   #### oplossing:
   Als oplossing ben ik gegaan voor vele schetsen en het zoeken naar inspiratie via pinterest, serie en stukjes film kijken. 
 
-
-
   ### Bevinding 3:
   Na het bekijken van mijn schetsen heb ik die in de les laten zien aan Merel W. Ze vond dat ik veel details had maar dat nog niet alles duidelijk was.
 
   #### oplossing:
   Samen hebben we van alle concepten 1 concept gemaakt en vanuit daar ben ik gaan nadenken.
+  <img src="readme-images/Eerste-stukje-grid.png" width="375px" alt="na-feedback-1">
 
   ### Bevinding 4:
   vanuit het concept ben ik opzoek gegaan naar verschillende elementen die vaker terug kwamen in star wars interfaces. 
@@ -80,6 +77,8 @@ Blauw
 
   #### oplossing:
   Hiervoor moest ik een redelijk simpel design maken die past bij een star wars interface. 
+  <img src="readme-images/Gridvan6met-namen-van-mijn-opbouw.png" width="375px" alt="basic-grid">
+
 
 </details>
 
@@ -96,13 +95,15 @@ Blauw
 
   #### oplossing:
   Ik heb de knoppen links een foto gegeven zodat je weet welke helm je krijgt wanneer je klikt. Dit heb ik opgelost met Javascript. 
-
+  <img src="readme-images/Meer-styling.png" width="375px" alt="before-feedback">
+  <img src="readme-images/Tussentijds-feedback2.png" width="375px" alt="after-feedback">
 
   ### Bevinding 2:
   Ook kon ik nog kijken naar het contrast in mijn interface. De groene lettertype voldeed niet aan de norm van 4.5 contrast 
 
   #### oplossing:
   Via inspecteren heb ik een nieuwe kleur gekozen voor het lettertype zodat ik precies aan de norm van contrast kon doen. 
+  <img src="readme-images/Contrast.png" width="375px" alt="Contrast">
 
 
   ### Bevinding 3:
@@ -135,23 +136,37 @@ Blauw
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Derde feedback heb ik aan Michael gevraagd. Hij had mijn werk nog niet gezien. Hij vond dat ik nog even kon kijken naar de darkmode.  
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
+  OMdat mijn interface van origin darkmode is heb ik besloten om mijn darkmode een lightmode te maken. Zo weet ik toch hoe het werkt en weet ik hoe ik een light en dark mode kan maken in mijn design
+  <img src="readme-images/darkmode.png" width="375px" alt="darkmode">
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Michael vond ook dat de responsiveness niet hoog genoeg was, dit is mijn fout doordat ik niet goed gebruik heb gemaakt van de position relative en position absolut. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
+  Dit probleem heb ik samen met sanne besproken en hij heeft me uitlegd dat ik alles ten opzichte van het scherm had gepositioneerd waardoor het niet mee schaalt. De kolom links onder doet het wel goed want die hebben we samen opgelost. 
 
   ### Bevinding 3:
-  ...
+  Hij vond mijn javascript netjes gestructueerd en ik kon nog wat meer feedback geven aan de gebruiker wanneer je ergens op klikt. 
+
+  ### oplossing:
+  Ik heb de cursor veranderd en ik heb in de javascript toegevoegd dat als je op een helm knop klikt er dan ook een slider beweegt. Dan heb je het gevoel dat die samen werken. 
+  <img src="readme-images/Javascript-helm.png" width="375px" alt="helm-code">
+  <img src="readme-images/Cursor.png" width="375px" alt="cursor-code">
+
+  ### Bevinding 4:
+  Ik had verteld dat de rode knop een video heeft. Maar de video werkt niet op github.  
+
+  ### oplossing:
+  Ik heb hier nog geen oplossing voor 
+
+  ### Bevinging 5: 
+  Michael zag ook dat als je met de states er door heen gaat dat het alleen is bij de helm knoppen en niet bij de sliders. 
+
+  ### oplossing: 
+  Ik heb een glow toegevoegd als je met button focus erover heen gaat. Hierdoor lijkt het alsof de knop oplicht als je er doorheen tapt. 
 
 </details>
 
@@ -164,19 +179,32 @@ Blauw
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/Eind-ontwerp" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  In het begin was ik overweldigd door wat allemaal kan met code en hoeveel werk er achter zit. Ik had nog nooit iets gecodeerd en wist niet eens in welk progamma ik moest werken. Langzamerhand kreeg ik het steeds beter onder de knie. Dit komt omdat ik alle lessen heb gevolgd en alles van brightspace heb geprobeerd.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Dit ging goed:
+   - Het bedenken van een ontwerp dat ook werkt met code. 
+   - Het maken van een grid met een duidelijk plan in mijn hoofd
+   - Het stijleren van box-shadows en geven van kleurtjes
+   - Het kleine beetje van javascript begrijpen maar nog wel moeilijk toe te passen.
+
+  <img src="readme-images/Javascript-helm.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik wilde nog meer helmen en informatie toevoegen, maar zag geen ruimte ervoor in mijn design. Ik wilde het met een soort swipe weg animatie de helmen laten in komen maar dat was geen beginnen aan. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Ik wilde de video die ik als paasei had verstopt laten zien op github maar kom er niet achter waarom die het niet laat zien. 
+
+  Ik wilde alles wat meer textuur geven door een lichte grunge toe te voegen, maar de grunge kreeg ik niet meer op mijn juiste onderdelen. 
+
+  Ik dacht dat het positioneren van de content goed ging, maar uiteindelijk heb ik de position relative en absolut niet helemaal goed toegepast.
+
+  De button state "Active" werkte niet. de focus en hover zijn wel gelukt. 
+
 </details>
 
 
@@ -189,8 +217,12 @@ Blauw
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. Chat GPT - voor informatie van star wars helmen
+2. https://medium.com/contractize-inc/star-wars-and-when-design-became-a-requirement-d1bf692d29c2 
+3. http://www.starwarshelmets.com/original-stormtrooper-helmets-sub-submenu.htm 
+4. De helm: https://www.wallpaperflare.com/storm-troopers-minimalism-star-wars-helmet-wallpaper-uriis 
+5. Code van Tatum voor de Audio. 
+6. Code van Leonie voor de video.
+7. Sanne voor al het gene wat niet lukte. 
 
 </details>

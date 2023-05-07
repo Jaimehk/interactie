@@ -9,12 +9,14 @@
 
 body {
   margin:0;
+  cursor: url("../images/cursor.png") 20 20, auto;
+
 }
 
+
 button {
-  cursor:pointer;
-  outline: none;
-  /* animation: lightsaber 1s ease delay infinite; */
+  cursor: pointer;
+  cursor: url("../images/cursor-pointer.png") 20 5, auto;
 }
 
 /*********************/
@@ -32,6 +34,7 @@ button {
   --wit: #fff; 
   --bgscherm:#3C3C3B;
   --attackbg: #AEAEAE; 
+  --Radersweep:  rgba(179,192,255,1);
   --radialrood: radial-gradient(circle, rgba(255,122,122,1) 20%, rgba(206,34,38,1) 71%);
   --radialblauw: radial-gradient(circle, rgba(179,192,255,1) 20%, rgba(125,146,252,1) 71%);
   --radialgroen: radial-gradient(circle, rgba(174,226,217,1) 20%, rgba(68,198,175,1) 71%);
@@ -226,10 +229,6 @@ li .parent {
   align-items: center;
 }
 
-.showVideo {
-  opacity: 100%;
-}
-
 /* VIDEO STYLING */
 #video {
   position: absolute;
@@ -275,7 +274,7 @@ li .parent {
     border: ridge;
     border-width: thin;
     box-sizing: content-box;
-    padding-top: 15px;
+    padding-top: 1em;
     position: relative;
     background: var(--systeemkleur);
     rotate: 0deg;
@@ -301,16 +300,14 @@ li .parent {
 /* DE TEXT */
   .panel-right > p {
     position: absolute;
-    bottom: 8%;
-    padding: 10px;
-    margin: 10px;
+    top: 15%;
+    padding: .5em;
+    margin: .5em;
     color: var(--BrightGreen);
     line-height: 1.5;
     font-size: 12px;
 
     font-family: monospace;
-
-    animation: typer 15s;
   }
 
   /* RECHTER WITTE STREEPJE */
@@ -321,9 +318,9 @@ li .parent {
     bottom: 85%;
     width: 4em;
     height: 4em;
-    border-bottom: 13px solid var(--wit);
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    border-bottom: .8em solid var(--wit);
+    border-left: 1.3em solid transparent;
+    border-right: 1.3em solid transparent;
     rotate: 90deg;
 
   }
@@ -353,24 +350,12 @@ li .parent {
 
 .parent .attack button img:hover {
   opacity: 80%;
-  transform: rotate(360deg);
 }
 
 .parent .attack button:focus {
-
-}
-
-.parent .attack button:focus img {
-  
-}
-
-@keyframes lightsaber {
-  0% {
-    filter: drop-shadow(0 0 0 .75rem blue);
-  }
-  100% {
-    filter: drop-shadow(0 0 0 blue);
-  }
+  outline-style: ridge;
+  outline-width: .3em;
+  outline-color: var(--bgscherm);
 }
 
 /* VIERKANTEN KNOPPEN  */
@@ -429,7 +414,7 @@ li .parent {
 
 /* SLIDER BOX is de BOX van de SLIDERS */
 .slider-box {
-  background-color: #3C3C3B;
+  background-color: var(--bgscherm);
   position: absolute;
   width: 25%;
   height: 60%;
@@ -437,9 +422,19 @@ li .parent {
   top:50%;
   transform: translate(-50%,-50%);
 
-  box-shadow: var(--drieD-schaduw)
-  
+  box-shadow: var(--drieD-schaduw) 
 }
+
+.navigatie button:focus {
+  outline: none;
+  box-shadow: var(--glowRed);
+}
+
+/* .navigatie button:active {
+  outline-style: ridge;
+  outline-color: var(--BrightGreen);
+  outline-width: .5em;
+} */
 
 /* GRIJS BALK van de SLIDERS */
 .Slider-1 {
@@ -504,31 +499,31 @@ li .parent {
 
 /* VOOR JAVASCRIPT SLIDERS */
  .slideSlider {
-  transform: translateY(80px);
+  transform: translateY(5em);
  }
 
  .slideSlider2 {
-  transform: translateY(152px);
+  transform: translateY(9.3em);
  }
 
  .box-slider-3.slideSlider3 {
-  transform: translateY(-150px);
+  transform: translateY(-9.3em);
  }
 
   .slideSlider4 {
-  transform: translateY(-150px);
+  transform: translateY(-9.3em);
  }
 
  .slideSlider4 {
-  transform: translateY(-150px);
+  transform: translateY(-9.3em);
  }
 
  .slideSlider5 {
-  transform: translateY(-150px);
+  transform: translateY(-9.3em);
  }
 
  .slideSlider6 {
-  transform: translateY(-150px);
+  transform: translateY(-9.3em);
  }
 
 /* BOX-SLIDER is de BOX van de SLIDERS */
@@ -799,8 +794,32 @@ to{
   animation: circle 10s linear infinite, brightRed 3s ease infinite, Verdwijn 1s infinite;
 }
 
+.pulse {
+  position: absolute;
+  top: 47.5%;
+  right: 47%;
+  scale: 6;
+  
+  border-radius: 100%;
+  width: 1em;
+  height: 1em;
+  border: var(--Radersweep);
+  border-style: solid;
+  border-width: .01em;
 
+  animation: pulse 3s ease-in infinite;
+}
 
+@keyframes pulse {
+  from {
+    scale: 0;
+    opacity: 100;
+  }
+  to {
+    scale: 18; 
+    opacity: 0;
+  }
+}
 
 
 

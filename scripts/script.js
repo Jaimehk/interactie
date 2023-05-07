@@ -64,26 +64,30 @@ vierkant4.addEventListener("click", goHelm4);
 
 function goHelm1() {
     deHelm.src = "images/Phase1.png";
-    helmH2.textContent = "Helmet information Phase 1"; 
-    helmP.textContent = "The Phase I clone trooper armor was crafted by Kaminoan armorsmiths specifically for the clone troopers of the Galactic Republic. It consisted of twenty lightweight plastoid-alloy composite plates that were form-fitting to the wearer. These plates were then sealed to a black temperature control bodysuit using magnatomic gription panels. The bodysuit itself was pressurized, which provided temporary protection against the vacuum of space. In addition, the body glove provided protection from extreme temperatures. To denote the military ranks of clone trooper officers, Phase I armor was adorned with splashes of color. This was particularly useful for non-clone officers or clone troopers with damaged or defective helmets. However, this practice eventually fell out of use as the clones began to exhibit more individuality under the influence of the Jedi."
+    helmH2.textContent = "Star Wars: Episode II: Attack of the Clones"; 
+    helmP.textContent = "De Phase 1-helm heeft een gestroomlijnd ontwerp en biedt de Clone Troopers een hoge mate van bescherming tijdens gevechten. Het gezichtsveld van de helm is groot, wat de troopers een breed zicht op het slagveld geeft. Bovendien is de helm voorzien van filters die schadelijke stoffen uit de lucht filteren en zo de ademhaling van de troopers beschermen. Een ander kenmerk van de Phase 1-helm is de T vizier die over de ogen van de Clone Troopers loopt. Deze vizier is geïnspireerd op de helm van de Mandalorianen en biedt de troopers een beter zicht tijdens gevechten. De helm heeft een ingebouwd communicatiesysteem waarmee troopers kunnen communiceren met hun commandanten en andere troopers op het slagveld. Daarnaast zijn er bevestigingspunten op de helm waar verschillende uitrustingsstukken aan kunnen worden bevestigd, zoals verlichting, wapens en sensoren. Een film later werd hij vervangen door de Phase 2 helmet."
+    slider2.classList.toggle("slideSlider2");
 }
 
 function goHelm2() {
     deHelm.src = "images/phase2.png";
-    helmH2.textContent = "kop 2";
-    helmP.textContent = "fase 2 tekst";
+    helmH2.textContent = "Star Wars: Episode III: Revenge of the Sith";
+    helmP.textContent = "De Phase 2-helm lijkt qua ontwerp sterk op de Phase 1-helm, maar heeft enkele belangrijke verbeteringen. De helm een ingebouwde microfoon, zodat troopers gemakkelijker met elkaar en hun commandanten kunnen communiceren. Phase 2-helm is de nieuwe vorm van de Tvizier. In tegenstelling tot de rechte vorm van de vizier in de Phase 1-helm, heeft de Tvizier in de Phase 2-helm een licht gebogen vorm die beter aansluit op de contouren van het gezicht. Dit geeft de troopers meer flexibiliteit in het veld en maakt het mogelijk om snel te schakelen tussen verschillende soorten uitrusting, afhankelijk van de situatie. Aan het einde van de film wordt order 66 gegeven aan de clone troopers, dit zorgt voor een verandering in het balans in the galaxy.";
+    slider5.classList.toggle("slideSlider5");
 }
 
 function goHelm3() {
     deHelm.src = "images/stormtrooper.png";
-    helmH2.textContent = "kop 3";
-    helmP.textContent = "fase 3 tekst";
+    helmH2.textContent = "Episode IV, V, VI";
+    helmP.textContent = "Na de val van de Galactic Republic werd de Galactic Empire opgericht. Het keizerlijke leger verving geleidelijk de Clone Troopers door Stormtroopers. Een van de belangrijkste veranderingen in de uitrusting van de Stormtroopers was de introductie van de Stormtrooper-helm. De helm heeft een meer gestroomlijnd uiterlijk met een witte kleur en zwart vizier. Het gezichtsveld van de Stormtrooper-helm is kleiner dan dat van de Phase 2-helm, waardoor de troopers een beperkter zicht hebben op het slagveld. de Stormtrooper-helm is het vocoder-spraakfilter, dat de stem van de drager verandert in een kenmerkend, mechanisch klinkend stemgeluid. Dit zorgde voor eenheid binnen het leger. De helm en het uniform hadden minder flexibiliteit waardoor de stormtroopers in alle opzichte minder voordeel hadden dan de Phase 2 clone troopers. Dit weerspiegelt de verandering in the galaxy. ";
+    slider6.classList.toggle("slideSlider6");
 }
 
 function goHelm4() {
     deHelm.src = "images/first-order.png";
-    helmH2.textContent = "kop 4";
-    helmP.textContent = "fase 4 tekst";
+    helmH2.textContent = "Episode VII, VIII, IX";
+    helmP.textContent = "Na de val van het Galactische Keizerrijk in Return of the Jedi, was er een machtsvacuüm in het universum dat de weg vrijmaakte voor verschillende groepen om de controle te proberen over te nemen. In deze tijd ontstond er de First Order, een militante groepering die naar voren kwam uit de overblijfselen van het Keizerrijk. De First Order helm heeft een zwart kleurenschema met een ander ontwerp, met scherpere hoeken en een meer agressieve uitstraling dan de vorige helm. De oogstukken van de helm hebben ook een meer angstaanjagend ontwerp, wat een beangstigend effect heeft op de vijand. De vocoder van de helm is nog angstaanjagender dan die van de storm troopers. De First Order geeft de indruk dat het sterrenstelsel nog meer onderdrukt is en hierdoor nog minder politieke vrijheid is. ";
+    slider4.classList.toggle("slideSlider4");
 }
 
 
@@ -120,24 +124,3 @@ RedButton.addEventListener('mouseout', () => {
     MoveAlong.pause();
 });
 
-
-// function showVideo () {
-// if (video1.style.display === "none") {
-//     video1.style.display = "none"
-//     }    
-      
-// else {
-//     video1.style.display = "none";
-//     }
-// }
-
-
-// function hidVideo () {
-// if (video1.style.display === "block") {
-//     video1.style.display = "block"
-//     }    
-      
-// else {
-//      video1.style.display = "block";
-//      }
-//  }
