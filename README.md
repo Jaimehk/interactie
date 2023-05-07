@@ -160,7 +160,7 @@ Blauw
   Ik had verteld dat de rode knop een video heeft. Maar de video werkt niet op github.  
 
   ### oplossing:
-  Ik heb hier nog geen oplossing voor 
+  Ik heb hier nog geen oplossing voor (gefixt geen idee hoe)
 
   ### Bevinging 5: 
   Michael zag ook dat als je met de states er door heen gaat dat het alleen is bij de helm knoppen en niet bij de sliders. 
@@ -197,7 +197,7 @@ Blauw
   ### Dit was lastig/Is niet gelukt:
   Ik wilde nog meer helmen en informatie toevoegen, maar zag geen ruimte ervoor in mijn design. Ik wilde het met een soort swipe weg animatie de helmen laten in komen maar dat was geen beginnen aan. 
 
-  Ik wilde de video die ik als paasei had verstopt laten zien op github maar kom er niet achter waarom die het niet laat zien. 
+  Ik wilde de video die ik als paasei had verstopt laten zien op github maar kom er niet achter waarom die het niet laat zien. (gefixt geen idee hoe)
 
   Ik wilde alles wat meer textuur geven door een lichte grunge toe te voegen, maar de grunge kreeg ik niet meer op mijn juiste onderdelen. 
 
