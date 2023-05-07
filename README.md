@@ -64,7 +64,7 @@ Blauw
 
   #### oplossing:
   Samen hebben we van alle concepten 1 concept gemaakt en vanuit daar ben ik gaan nadenken.
-  <img src="readme-images/Eerste-stukje-grid.png" width="375px" alt="na-feedback-1">
+  <img src="readme-images/Eerste-schets-na-feedback.png" width="375px" alt="na-feedback-1">
 
   ### Bevinding 4:
   vanuit het concept ben ik opzoek gegaan naar verschillende elementen die vaker terug kwamen in star wars interfaces. 
