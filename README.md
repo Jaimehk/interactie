@@ -26,8 +26,8 @@ Blauw
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
-
+  <img src="readme-images/schets1.png" width="375px" alt="schets1">
+  <img src="readme-images/schets2.png" width="375px" alt="schets2">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -179,7 +179,7 @@ Blauw
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/Eind-ontwerp" width="375px" alt="final ontwerp">
+  <img src="readme-images/Eind-ontwerp.png" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd: 
